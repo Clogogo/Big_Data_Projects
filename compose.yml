@@ -11,7 +11,7 @@ services:
     volumes:
       - "./mnt/:/home/jovyan/"
       - "./Data/:/home/jovyan/input/"
-      # - "./s/:/home/jovyan/input/"
+      - "./src/:/home/jovyan/input/"
       
     depends_on:
       - spark-master
