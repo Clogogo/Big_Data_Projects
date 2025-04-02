@@ -10,7 +10,6 @@ services:
       - "4040:4040" # Spark UI
     volumes:
       - "./mnt/:/home/jovyan/"
-      - "./Data/:/home/jovyan/input/"
       - "./src/:/home/jovyan/input/"
       
     depends_on:
@@ -22,7 +21,7 @@ services:
     command: bin/spark-class org.apache.spark.deploy.master.Master
     ports:
       - "7077:7077" # Spark Master Port
-      - "8080:8080" # Spark Master Web UI
+      - "8081:8081" # Spark Master Web UI
     environment:
       - SPARK_MODE=master
 
